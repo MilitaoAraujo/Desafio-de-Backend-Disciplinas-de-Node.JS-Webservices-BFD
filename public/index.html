@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>API de Produtos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Produtos</h1>
+
+  <div class="filters">
+    <button onclick="loadProducts()">Todos</button>
+
+    <input type="text" id="category" placeholder="Categoria">
+    <button onclick="searchByCategory()">Buscar Categoria</button>
+
+    <input type="number" id="min" placeholder="Preço mín">
+    <input type="number" id="max" placeholder="Preço máx">
+    <button onclick="searchByPrice()">Buscar Preço</button>
+  </div>
+
+  <div id="products"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
