@@ -1,37 +1,87 @@
-```md
-# API de Produtos
+# API de Produtos – Node.js
 
-API REST simples desenvolvida em Node.js com Express e SQLite.
-Possui um front-end básico para consumir a API.
+Projeto simples de **API REST** desenvolvido em **Node.js + Express**, utilizando **SQLite** como banco de dados e um **front-end básico** para consumo da API.
+
+---
 
 ## Tecnologias
-- Node.js
-- Express
-- SQLite
-- HTML, CSS e JavaScript
 
-## Como rodar
+* Node.js
+* Express.js
+* SQLite
+* HTML, CSS e JavaScript
 
-1. Instalar dependências:
+---
+
+## Como rodar o projeto
+
+1. Instale as dependências:
+
+```bash
 npm install
+```
 
-2. Criar e popular o banco:
+2. Crie e popule o banco de dados:
+
+```bash
 npm run seed
+```
 
-3. Iniciar o servidor:
+3. Inicie o servidor:
+
+```bash
 npm run dev
+```
 
-Acesse:
+Servidor disponível em:
+
+```
 http://localhost:3000
+```
+
+---
 
 ## Rotas da API
 
-GET /api/products  
-GET /api/products/:id  
-GET /api/products/category/search?category=Eletrônicos  
+* Listar produtos
+
+```
+GET /api/products
+```
+
+* Buscar produto por ID
+
+```
+GET /api/products/:id
+```
+
+* Buscar por categoria
+
+```
+GET /api/products/category/search?category=Eletrônicos
+```
+
+* Buscar por faixa de preço
+
+```
 GET /api/products/price/search?min=100&max=1000
+```
+
+---
+
+## Front-end
+
+O front-end é acessado em:
+
+```
+http://localhost:3000
+```
+
+Ele consome a API e permite visualizar e filtrar os produtos.
+
+---
 
 ## Observações
-- Retorna JSON
-- Retorna 404 para rotas ou produtos inexistentes
-```
+
+* A API retorna **404** para rotas inexistentes ou produtos não encontrados.
+* O banco é populado automaticamente com dados de teste.
